@@ -11,9 +11,11 @@ const initialProductState = {
 
 const productReducer = (state, action) => {
   switch (action.type) {
+    // SHOW PRODUCT
     case TYPES.productShow:
       return { ...state, activeProduct: action.payload };
 
+    // ADD PRODUCT
     case TYPES.productAddToCart: {
       const newProduct = action.payload;
       const cartContainsProduct = state.cart.find(
@@ -33,12 +35,14 @@ const productReducer = (state, action) => {
             cart: [...state.cart, { ...action.payload, quantity: 1 }],
           };
     }
+    // REMOVE ALL PRODUCTS
     case TYPES.productRemoveFromCart:
       return {
         ...state,
         cart: state.cart.filter((product) => product.id !== action.payload),
       };
 
+    // REMOVE ONE PRODUCT
     case TYPES.productRemoveOne: {
       const productDelete = state.cart.find(
         (product) => product.id === action.payload
