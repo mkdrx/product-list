@@ -2,14 +2,20 @@
 
 ## Based on [Luis Cabrera](https://github.com/luismcabrera) - useReducer explanation
 
-**To install dependencies:**
+- Clone the project
 
-```
-npm install
+```bash
+  git clone https://github.com/mkdrx/product-list.git
 ```
 
-**Run on http://localhost:3000 and the command to start dev mode**
+- Go to the project directory
 
+```bash
+  cd product-list
 ```
-npm start
+
+- Install dependencies
+
+```bash
+  npm install
 ```
